@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TaskViewComponent } from './components/task-view/task-view.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path:'', component: TaskViewComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
