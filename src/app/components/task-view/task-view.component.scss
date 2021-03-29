@@ -4,6 +4,26 @@
      box-sizing: border-box; 
 }
 
+ /* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333399;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4747c4;
+  } 
+
 .centered-content {
     height: 100%;
     width: 100%;
@@ -25,7 +45,7 @@
 
 .task-list-container {
     height: 100%;
-    width: 400px;
+    width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -39,12 +59,14 @@
 .title {
     width: 100%;
     height: 15%;
-    padding: 20px;
+    padding: 32px;
 
     h1 {
         font-family: 'Fugaz One', sans-serif;
         color: #3e3e3e;
         font-size: 32px;
+
+        cursor: default;
     }
 }
 
@@ -55,14 +77,51 @@
 
     width: 100%;
     flex: 1;
-    padding: 20px;
+    padding: 32px;
+
+    overflow-y: auto;
 
     h2 {
         font-family: 'Fugaz One', sans-serif;
-        color: #9deea6;
+        color: #901CB0;
         font-size: 26px;
+
+        cursor: pointer;
+
+        &:hover {
+            color: #B513B9;
+        }
+
+        &.is-active {
+            color: #C70EBE;
+        }
     }
 
+}
+
+.add-list-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 32px;
+    height: 10%;
+    width: 100%;
+
+    button {
+        height: 50px;
+        width: 100%;
+
+        border: none;
+        border-radius: 20px;
+        background: #EC05C7;
+        cursor: pointer;
+
+        font-size: 15px;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+    }
 }
 
 .task-container {
@@ -93,9 +152,6 @@
     cursor: pointer;
 
     font-family: 'Lato', sans-serif;
-    h2 {
-        font-weight: 700;
-    }
     p {
         font-weight: 400;
     }
