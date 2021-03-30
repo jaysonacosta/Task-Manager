@@ -13,10 +13,6 @@ export class TaskViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createNewList() {
-    this.taskService.createList('this was created just now').subscribe((response: any) => {
-      console.log(response);
-    })
-  }
+
 
 }

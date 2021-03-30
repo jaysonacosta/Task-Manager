@@ -1,0 +1,22 @@
+<div class="centered-content">
+
+    <div class="new-list-container">
+
+        <div class="title">
+            <h1>
+                Create a new list
+            </h1>
+        </div>
+
+        <div class="input-area">
+
+            <input class="text-input" #textInput type="text" placeholder="Enter list name...">
+
+            <button class="submit-button" (click)="createNewList(textInput.value)">Submit</button>
+            <button class="go-back-button" routerLink="/">Go Back</button>
+
+        </div>
+
+    </div>
+
+</div>
