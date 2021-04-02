@@ -23,6 +23,7 @@ export class NewListComponent implements OnInit {
     this.taskService.createList(title).subscribe((response: any) => {
       console.log(response);
     })
+
     this.router.navigate(["/"]);
     
   }

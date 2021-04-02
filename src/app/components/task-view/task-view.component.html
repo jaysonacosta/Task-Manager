@@ -6,27 +6,16 @@
 
             <div class="title">
 
-                <h1>Tasks</h1>
+                <h1>Lists</h1>
 
             </div>
 
             <div class="task-items">
 
-                <h2 class="task is-active">
-                    Task #1
+                <h2 class="task" *ngFor="let list of lists" [routerLink]="['/lists/',list._id]" routerLinkActive="is-active">
+                    {{list.title}}
                 </h2>
 
-                <h2 class="task">
-                    Task #2
-                </h2>
-
-                <h2 class="task">
-                    Task #3
-                </h2>
-
-                <h2 class="task">
-                    Task #3
-                </h2>
 
             </div>
 
@@ -41,25 +30,31 @@
 
         <div class="task-container">
 
-            <div class="task-card">
-                <p>
-                    -Eggs
-                    -Milk
-                    -Veggies
-                </p>
+            <div class="task-title">
+
+                <h1>Tasks</h1>
+
+                <button class="create-task" routerLink="">
+                    Add Task
+                </button>
+
             </div>
 
-            <div class="task-card">
-                <p>
-                    -$100
-                </p>
+            <div class="task-card-container">
+
+                <div class="task-card" *ngFor="let task of tasks">
+                    <p>{{ task.title }}</p>
+                </div>  
+    
+                <div class="task-card completed">
+                    <p>
+                        6:00 P.M.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="task-card completed">
-                <p>
-                    6:00 P.M.
-                </p>
-            </div>
+
 
         </div>
 
